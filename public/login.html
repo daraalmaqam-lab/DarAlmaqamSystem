@@ -2,71 +2,16 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>تسجيل الدخول - دار المقام</title>
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      background: #000;
-      color: #fff;
-      text-align: center;
-      direction: rtl;
-    }
-    .login-box {
-      margin: 100px auto;
-      width: 350px;
-      background: rgba(0,0,0,0.7);
-      padding: 30px;
-      border-radius: 15px;
-      border: 2px solid #ffd700;
-      box-shadow: 0 0 15px rgba(255,215,0,0.5);
-    }
-    .logo img {
-      width: 120px;
-      margin-bottom: 15px;
-    }
-    .logo h2 {
-      color: #ffd700;
-      margin: 0;
-      font-size: 22px;
-    }
-    .logo small {
-      color: #ccc;
-      font-size: 14px;
-    }
-    input {
-      width: 90%;
-      margin: 10px 0;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ffd700;
-      background: #111;
-      color: #fff;
-    }
-    input::placeholder { color: #ccc; }
-    button {
-      width: 95%;
-      padding: 12px;
-      margin-top: 15px;
-      border-radius: 8px;
-      border: none;
-      background: linear-gradient(135deg,#ffd700,#daa520);
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    button:hover { transform: scale(1.05); }
-  </style>
+  <title>تسجيل الدخول</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-box">
-    <div class="logo">
-      <!-- شعار الشركة -->
-      <img src="images/daralmaqamimages.jpg" alt="شعار دار المقام">
-      <h2>شركة دار المقام<br><small>لخدمات العمرة والحج</small></h2>
-    </div>
-    <input type="text" placeholder="اسم المستخدم"><br>
-    <input type="password" placeholder="كلمة المرور"><br>
-    <button onclick="location.href='branch.html'">دخول</button>
-  </div>
+  <h1>تسجيل الدخول</h1>
+  <form>
+    <input type="text" placeholder="اسم المستخدم" required>
+    <input type="password" placeholder="كلمة المرور" required>
+    <button type="submit">دخول</button>
+  </form>
+  <p><a href="index.html">العودة للصفحة الرئيسية</a></p>
 </body>
 </html>
