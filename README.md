@@ -1,17 +1,13 @@
-# 1. ادخل لمجلد المشروع الصحيح
-cd C:\Users\hp\Desktop\DarAlmaqamSystem
+# DarAlmaqamSystem
 
-# 2. اسحب آخر التغييرات من GitHub (باش تتفادى أي تعارض)
-git pull origin main
+نظام دار المقام لإدارة الحج والعمرة باستخدام Node.js وExpress.
 
-# 3. أنشئ ملف README.md (لو مش موجود)
-echo "# DarAlmaqamSystem" > README.md
+## 📦 المتطلبات
+- Node.js (الإصدار 18 أو أحدث)
+- NPM
 
-# 4. أضف الملف إلى Git
-git add README.md
-
-# 5. اعمل commit للتغييرات
-git commit -m "Add README file"
-
-# 6. ادفع التغييرات إلى GitHub
-git push origin main
+## 🚀 طريقة التشغيل
+1. نزّل المشروع:
+   ```bash
+   git clone https://github.com/daraalmaqam-lab/DarAlmaqamSystem.git
+   cd DarAlmaqamSystem
