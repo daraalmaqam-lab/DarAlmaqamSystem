@@ -2,42 +2,16 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>لوحة المدير الخاصة بالفرع</title>
-  <style>
-    body { font-family:'Cairo',sans-serif; background:#000; color:#fff; margin:0; padding:0; direction:rtl; }
-    h2 { text-align:center; padding:20px; color:#ffd700; }
-    .logo img { width:100px; display:block; margin:0 auto; }
-    .logo h2 { color:#ffd700; text-align:center; }
-    .glass-box { background:rgba(255,255,255,0.08); border-radius:15px; padding:20px; margin:20px; border:1px solid #ffd700; }
-    input, select, button { margin:8px 0; padding:8px; border-radius:8px; border:none; font-family:'Cairo'; }
-    button { background:linear-gradient(135deg,#ffd700,#daa520); color:#000; font-weight:bold; cursor:pointer; }
-    table { width:95%; margin:20px auto; border-collapse:collapse; text-align:center; }
-    th { background:#ffd700; color:#000; padding:10px; }
-    td { padding:8px; border-bottom:1px solid rgba(255,255,255,0.2); }
-    .flex-container { display:flex; gap:20px; justify-content:space-around; }
-  </style>
+  <title>إدارة الفروع</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="logo">
-    <img src="images/daralmaqamimages.jpg" alt="شعار دار المقام">
-    <h2>شركة دار المقام<br><small>لخدمات العمرة والحج</small></h2>
-  </div>
-
-  <h2>✨ لوحة المدير الخاصة بالفرع ✨</h2>
-
-  <!-- إدارة الفروع -->
-  <div class="glass-box">
-    <h3>🏢 إدارة الفروع</h3>
-    <select id="branchesList"><option>-- اختر فرع --</option></select>
-    <button onclick="deleteBranch()">❌ حذف الفرع</button>
-    <hr>
-    <input type="text" id="branchName" placeholder="اسم الفرع"><br>
-    <input type="text" id="branchPhone" placeholder="رقم الهاتف"><br>
-    <input type="text" id="branchUser" placeholder="اسم المستخدم"><br>
-    <input type="password" id="branchPass" placeholder="كلمة المرور"><br>
-    <button onclick="addBranch()">➕ إضافة فرع</button>
-  </div>
-
-  <!-- باقي الأقسام (فنادق، طيران، مواصلات) بنفس الأسلوب -->
+  <h1>إدارة الفروع</h1>
+  <form>
+    <input type="text" placeholder="اسم الفرع" required>
+    <input type="text" placeholder="الموقع" required>
+    <button type="submit">إضافة فرع</button>
+  </form>
+  <p><a href="admin.html">العودة للوحة الإدارة</a></p>
 </body>
 </html>
