@@ -1,40 +1,85 @@
 body {
-  font-family: Tahoma, Arial, sans-serif;
-  direction: rtl;
-  text-align: center;
-  background-color: #f5f5f5;
-}
-
-h1 {
-  color: #2c3e50;
-  margin-bottom: 30px;
-}
-
-.dashboard {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  width: 250px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.card h2 {
-  color: #2c3e50;
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: #2c3e50;
+  font-family: "Tahoma", sans-serif;
+  background-color: #111;
   color: #fff;
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+header {
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #FFD700;
+}
+
+header h1 {
+  color: #FFD700;
+  margin: 0;
+}
+
+header h2 {
+  color: #fff;
+  margin: 5px 0 0 0;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  border: 1px solid #FFD700;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+}
+
+section h3 {
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input, select {
+  padding: 8px;
+  border: 1px solid #FFD700;
   border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  flex: 1;
+}
+
+button {
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #e6c200;
+}
+
+#pilgrim-card {
+  text-align: center;
+}
+
+.card-preview {
+  border: 2px solid #FFD700;
+  padding: 20px;
+  margin-top: 15px;
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  width: 300px;
 }
