@@ -1,13 +1,106 @@
-<form action="/addUser" method="POST">
-  <input type="text" name="branch" placeholder="اسم الفرع" required>
-  <input type="text" name="username" placeholder="اسم المستخدم" required>
-  <input type="password" name="password" placeholder="كلمة المرور" required>
-  <button type="submit">إضافة مستخدم للفرع</button>
-</form>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة المدير العامة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>شركة دار المقام لخدمات العمرة والحج</h1>
+    <h2>لوحة المدير العامة</h2>
+  </header>
 
-<form action="/uploadData" method="POST" enctype="multipart/form-data">
-  <input type="text" name="pilgrimName" placeholder="اسم المعتمر" required>
-  <input type="file" name="invoice" required>
-  <input type="file" name="passport" required>
-  <button type="submit">رفع البيانات</button>
-</form>
+  <main>
+    <!-- إدارة المستخدمين -->
+    <section id="user-management">
+      <h3>إدارة المستخدمين</h3>
+      <form action="/addUser" method="POST">
+        <input type="text" name="branch" placeholder="اسم الفرع" required>
+        <input type="text" name="username" placeholder="اسم المستخدم" required>
+        <input type="password" name="password" placeholder="كلمة المرور" required>
+        <button type="submit">إضافة مستخدم</button>
+      </form>
+    </section>
+
+    <!-- استقبال الفواتير والجوازات -->
+    <section id="invoice-upload">
+      <h3>استقبال الفواتير وصور الجوازات</h3>
+      <form action="/branches" method="POST" enctype="multipart/form-data">
+        <input type="text" name="pilgrimName" placeholder="اسم المعتمر" required>
+        <input type="file" name="invoice" required>
+        <input type="file" name="passport" required>
+        <button type="submit">رفع البيانات</button>
+      </form>
+    </section>
+
+    <!-- رحلات الطيران -->
+    <section id="flight-management">
+      <h3>رحلات الطيران</h3>
+      <form action="/addFlight" method="POST">
+        <select name="airline">
+          <option>الخطوط الليبية</option>
+          <option>الخطوط التركية</option>
+          <option>الخطوط المصرية</option>
+          <option>الخطوط الأردنية</option>
+        </select>
+        <input type="text" name="fromCity" placeholder="من" required>
+        <input type="text" name="toCity" placeholder="إلى" required>
+        <input type="text" name="flightGo" placeholder="رقم رحلة الذهاب" required>
+        <input type="text" name="flightReturn" placeholder="رقم رحلة العودة" required>
+        <input type="time" name="departTime" placeholder="وقت الإقلاع" required>
+        <input type="time" name="arriveTime" placeholder="وقت الوصول" required>
+        <input type="number" name="economySeats" placeholder="مقاعد عادية" required>
+        <input type="number" name="businessSeats" placeholder="مقاعد بزنس" required>
+        <select name="currency">
+          <option>دينار</option>
+          <option>دولار</option>
+        </select>
+        <input type="text" name="price" placeholder="السعر" required>
+        <button type="submit">إضافة الرحلة</button>
+      </form>
+    </section>
+
+    <!-- الفنادق -->
+    <section id="hotel-management">
+      <h3>الفنادق</h3>
+      <form action="/addHotel" method="POST">
+        <input type="text" name="hotelName" placeholder="اسم الفندق" required>
+        <select name="city">
+          <option>المدينة</option>
+          <option>مكة</option>
+        </select>
+        <select name="roomType">
+          <option>فردية</option>
+          <option>ثنائية</option>
+          <option>ثلاثية</option>
+          <option>رباعية</option>
+          <option>خماسية</option>
+          <option>جناح فخم</option>
+        </select>
+        <input type="number" name="nights" placeholder="عدد الليالي" required>
+        <select name="currency">
+          <option>دينار</option>
+          <option>دولار</option>
+        </select>
+        <input type="text" name="price" placeholder="السعر" required>
+        <button type="submit">إضافة الفندق</button>
+      </form>
+    </section>
+
+    <!-- بطاقة المعتمر -->
+    <section id="pilgrim-card">
+      <h3>بطاقة المعتمر</h3>
+      <form action="/generateCard" method="POST">
+        <input type="text" name="name" placeholder="اسم المعتمر" required>
+        <input type="text" name="hotelMedina" placeholder="فندق المدينة" required>
+        <input type="text" name="hotelMecca" placeholder="فندق مكة" required>
+        <input type="text" name="repMedina" placeholder="مندوب المدينة" required>
+        <input type="text" name="repMecca" placeholder="مندوب مكة" required>
+        <input type="text" name="companyPhone" placeholder="رقم الشركة" required>
+        <button type="submit">طباعة البطاقة</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
