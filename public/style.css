@@ -69,17 +69,3 @@ button {
 button:hover {
   background-color: #e6c200;
 }
-
-#pilgrim-card {
-  text-align: center;
-}
-
-.card-preview {
-  border: 2px solid #FFD700;
-  padding: 20px;
-  margin-top: 15px;
-  display: inline-block;
-  background-color: #000;
-  color: #fff;
-  width: 300px;
-}
