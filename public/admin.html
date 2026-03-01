@@ -15,6 +15,10 @@
     .card { width: 148mm; height: 105mm; border: 1px solid #000; background: #fff; padding: 10px; box-sizing: border-box; }
     .front, .back { margin: 10px; }
     .logo { font-weight: bold; font-size: 18px; margin-bottom: 10px; }
+    @media print {
+      body { background: none; }
+      .card { page-break-inside: avoid; }
+    }
   </style>
 </head>
 <body>
