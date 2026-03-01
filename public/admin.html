@@ -1,127 +1,13 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>لوحة الإدارة - نظام دار المقام</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body { font-family: Tahoma, Arial, sans-serif; direction: rtl; text-align: center; background: #f5f5f5; }
-    section { background: #fff; margin: 20px auto; padding: 20px; width: 80%; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    h2 { color: #2c3e50; margin-bottom: 15px; }
-    form { margin: 10px auto; }
-    input, select, button { display: block; width: 90%; margin: 8px auto; padding: 8px; }
-    button { background: #2c3e50; color: #fff; border: none; cursor: pointer; }
-    .card-container { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
-    .card { width: 148mm; height: 105mm; border: 1px solid #000; background: #fff; padding: 10px; box-sizing: border-box; }
-    .front, .back { margin: 10px; }
-    .logo { font-weight: bold; font-size: 18px; margin-bottom: 10px; }
-    @media print {
-      body { background: none; }
-      .card { page-break-inside: avoid; }
-    }
-  </style>
-</head>
-<body>
-  <h1>لوحة الإدارة</h1>
+<form action="/addUser" method="POST">
+  <input type="text" name="branch" placeholder="اسم الفرع" required>
+  <input type="text" name="username" placeholder="اسم المستخدم" required>
+  <input type="password" name="password" placeholder="كلمة المرور" required>
+  <button type="submit">إضافة مستخدم للفرع</button>
+</form>
 
-  <!-- قسم إدارة الفروع والمستخدمين -->
-  <section>
-    <h2>إدارة الفروع والمستخدمين</h2>
-    <form>
-      <input type="text" placeholder="اسم الفرع" required>
-      <input type="text" placeholder="اسم المستخدم" required>
-      <input type="password" placeholder="كلمة المرور" required>
-      <button type="submit">إضافة مستخدم للفرع</button>
-    </form>
-  </section>
-
-  <!-- قسم استقبال الفواتير وصور الجوازات -->
-  <section>
-    <h2>الفواتير وصور الجوازات</h2>
-    <form enctype="multipart/form-data">
-      <input type="text" placeholder="اسم المعتمر" required>
-      <input type="file" name="invoice" required>
-      <input type="file" name="passport" required>
-      <button type="submit">رفع البيانات</button>
-    </form>
-  </section>
-
-  <!-- قسم رحلات الطيران -->
-  <section>
-    <h2>رحلات الطيران</h2>
-    <form>
-      <select required>
-        <option>الخطوط الليبية</option>
-        <option>الخطوط التركية</option>
-        <option>الخطوط المصرية</option>
-        <option>الخطوط الأردنية</option>
-      </select>
-      <input type="text" placeholder="من (مدينة الانطلاق)" required>
-      <input type="text" placeholder="إلى (مدينة الوصول)" required>
-      <input type="text" placeholder="رقم رحلة الذهاب" required>
-      <input type="text" placeholder="رقم رحلة العودة" required>
-      <input type="datetime-local" required>
-      <input type="datetime-local" required>
-      <input type="number" placeholder="عدد المقاعد العادية" required>
-      <input type="number" placeholder="عدد مقاعد البزنس" required>
-      <input type="text" placeholder="السعر (دينار أو دولار)" required>
-      <button type="submit">إضافة رحلة</button>
-    </form>
-  </section>
-
-  <!-- قسم الفنادق -->
-  <section>
-    <h2>الفنادق (المدينة ومكة)</h2>
-    <form>
-      <input type="text" placeholder="اسم الفندق" required>
-      <select required>
-        <option>المدينة</option>
-        <option>مكة</option>
-      </select>
-      <select required>
-        <option>فردية</option>
-        <option>ثنائية</option>
-        <option>ثلاثية</option>
-        <option>رباعية</option>
-        <option>خماسية</option>
-        <option>جناح فخم</option>
-      </select>
-      <input type="number" placeholder="عدد الليالي" required>
-      <input type="text" placeholder="السعر (دينار أو دولار)" required>
-      <button type="submit">إضافة فندق</button>
-    </form>
-  </section>
-
-  <!-- قسم بطاقة المعتمر -->
-  <section>
-    <h2>بطاقة المعتمر (A6)</h2>
-    <form>
-      <input type="text" placeholder="اسم المعتمر" required>
-      <input type="text" placeholder="فندق المدينة" required>
-      <input type="text" placeholder="فندق مكة" required>
-      <input type="text" placeholder="رقم مندوب المدينة" required>
-      <input type="text" placeholder="رقم مندوب مكة" required>
-      <input type="text" placeholder="رقم الشركة" required>
-      <button type="submit">طباعة البطاقة</button>
-    </form>
-
-    <!-- نموذج البطاقة -->
-    <div class="card-container">
-      <div class="card front">
-        <div class="logo">شعار شركة دار المقام</div>
-        <p><strong>اسم المعتمر:</strong> ________</p>
-        <p><strong>فندق المدينة:</strong> ________</p>
-        <p><strong>فندق مكة:</strong> ________</p>
-        <p><strong>مندوب المدينة:</strong> ________</p>
-        <p><strong>مندوب مكة:</strong> ________</p>
-      </div>
-      <div class="card back">
-        <div class="logo">شعار شركة دار المقام</div>
-        <p><strong>أرقام الشركة:</strong> ________</p>
-      </div>
-    </div>
-  </section>
-
-  <p><a href="index.html">العودة للصفحة الرئيسية</a></p>
-</body>
-</html>
+<form action="/uploadData" method="POST" enctype="multipart/form-data">
+  <input type="text" name="pilgrimName" placeholder="اسم المعتمر" required>
+  <input type="file" name="invoice" required>
+  <input type="file" name="passport" required>
+  <button type="submit">رفع البيانات</button>
+</form>
