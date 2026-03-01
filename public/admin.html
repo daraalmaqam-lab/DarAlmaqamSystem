@@ -2,15 +2,95 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>لوحة الإدارة</title>
+  <title>لوحة الإدارة - نظام دار المقام</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>لوحة الإدارة</h1>
-  <ul>
-    <li><a href="branch.html">إدارة الفروع</a></li>
-    <li><a href="login.html">تسجيل الدخول</a></li>
-    <li><a href="index.html">الصفحة الرئيسية</a></li>
-  </ul>
+
+  <!-- قسم إدارة الفروع والمستخدمين -->
+  <section>
+    <h2>إدارة الفروع والمستخدمين</h2>
+    <form>
+      <input type="text" placeholder="اسم الفرع" required>
+      <input type="text" placeholder="اسم المستخدم" required>
+      <input type="password" placeholder="كلمة المرور" required>
+      <button type="submit">إضافة مستخدم للفرع</button>
+    </form>
+  </section>
+
+  <!-- قسم استقبال الفواتير وصور الجوازات -->
+  <section>
+    <h2>الفواتير وصور الجوازات</h2>
+    <form enctype="multipart/form-data">
+      <input type="text" placeholder="اسم المعتمر" required>
+      <input type="file" name="invoice" required>
+      <input type="file" name="passport" required>
+      <button type="submit">رفع البيانات</button>
+    </form>
+  </section>
+
+  <!-- قسم رحلات الطيران -->
+  <section>
+    <h2>رحلات الطيران</h2>
+    <form>
+      <select required>
+        <option>الخطوط الليبية</option>
+        <option>الخطوط التركية</option>
+        <option>الخطوط المصرية</option>
+        <option>الخطوط الأردنية</option>
+      </select>
+      <input type="text" placeholder="من (مدينة الانطلاق)" required>
+      <input type="text" placeholder="إلى (مدينة الوصول)" required>
+      <input type="text" placeholder="رقم رحلة الذهاب" required>
+      <input type="text" placeholder="رقم رحلة العودة" required>
+      <input type="datetime-local" placeholder="توقيت الإقلاع" required>
+      <input type="datetime-local" placeholder="توقيت الوصول" required>
+      <input type="number" placeholder="عدد المقاعد العادية" required>
+      <input type="number" placeholder="عدد مقاعد البزنس" required>
+      <input type="text" placeholder="السعر (دينار أو دولار)" required>
+      <button type="submit">إضافة رحلة</button>
+    </form>
+  </section>
+
+  <!-- قسم الفنادق -->
+  <section>
+    <h2>الفنادق (المدينة ومكة)</h2>
+    <form>
+      <input type="text" placeholder="اسم الفندق" required>
+      <select required>
+        <option>المدينة</option>
+        <option>مكة</option>
+      </select>
+      <select required>
+        <option>فردية</option>
+        <option>ثنائية</option>
+        <option>ثلاثية</option>
+        <option>رباعية</option>
+        <option>خماسية</option>
+        <option>جناح فخم</option>
+      </select>
+      <input type="number" placeholder="عدد الليالي" required>
+      <input type="text" placeholder="السعر (دينار أو دولار)" required>
+      <button type="submit">إضافة فندق</button>
+    </form>
+  </section>
+
+  <!-- قسم بطاقة المعتمر -->
+  <section>
+    <h2>بطاقة المعتمر</h2>
+    <form>
+      <input type="text" placeholder="اسم المعتمر" required>
+      <input type="text" placeholder="فندق المدينة" required>
+      <input type="text" placeholder="فندق مكة" required>
+      <input type="text" placeholder="رقم مندوب المدينة" required>
+      <input type="text" placeholder="رقم مندوب مكة" required>
+      <input type="text" placeholder="رقم الشركة" required>
+      <button type="submit">طباعة البطاقة</button>
+    </form>
+    <p>البطاقة ستحتوي على: شعار الشركة، اسم المعتمر، الفنادق، أرقام المندوبين، وأرقام الشركة (من الأمام والخلف).</p>
+  </section>
+
+  <p><a href="index.html">العودة للصفحة الرئيسية</a></p>
 </body>
 </html>
